@@ -1,0 +1,22 @@
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="main.js"></script>
+<script>
+	const bosch = new WashingMachine();
+	console.log(bosch)
+	bosch.plugIn();
+	bosch.turnOn();
+	bosch.run();
+
+	const lightBulb = new LightSource();
+	console.log(lightBulb)
+	lightBulb.plugIn();
+	lightBulb.setLevel(60);
+	lightBulb.turnOn();
+
+	const honda = new Car();
+	console.log(honda)
+	honda.setPosition(30, 40);
+	honda.turnOn();
+	honda.setSpeed(60);
+	honda.run(180, 240);
+</script>
