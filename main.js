@@ -97,19 +97,17 @@ class Car extends AutoVehicle {
 		this.speed = speed;
 	}
 	run(x, y) {
-		let interval = setInterval(function() {
-			let newX = x + this.speed; 
+		let interval = setInterval( () => {
+			let newX = this.position.x + this.speed; 
 			if (newX >= x) {
 				newX = x;
 			} 
-			let newY = y + this.setSpeed;
+			let newY = this.position.y + this.speed;
 			if (newY >= y) {
 				newY = y;
-			}
+			} 
 
-			console.log(newX, newY)
-
-			super.setPosition(newX, newY);
+			this.setPosition(newX, newY) 
 			console.log('Car started!' + newX + ' ' + newY);
 			if (newX === x && newY ===y) {
 				clearInterval(interval);
